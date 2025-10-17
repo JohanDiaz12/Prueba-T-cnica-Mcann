@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McCann Worldgroup México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Quicksand", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #8A2036, #6F1634);
+            animation: gradient 10s infinite alternate;
+            width: 100%;
+            overflow: hidden;
+            --clr: #f7a7b8;
+        }
+
+        body:hover {
+            --clr: #f7a7b8;
+        }
+
+        @keyframes gradient {
+            0% {
+                background: linear-gradient(135deg, #8A2036, #6F1634);
+            }
+            50% {
+                background: linear-gradient(135deg, #6F1634, #5a0e2a);
+            }
+            100% {
+                background: linear-gradient(135deg, #8A2036, #6F1634);
+            }
+        }
+
+        .ring {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ring i {
+            position: absolute;
+            inset: 0;
+            border: 2px solid #fff;
+            transition: 0.5s;
+        }
+
+        .ring i:nth-child(1) {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: animate 6s linear infinite;
+        }
+
+        .ring i:nth-child(2) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate 4s linear infinite;
+        }
+
+        .ring i:nth-child(3) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate2 10s linear infinite;
+        }
+
+        .ring:hover i {
+            border: 6px solid var(--clr);
+            filter: drop-shadow(0 0 20px var(--clr));
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .reset {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .reset h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .reset .inputBx {
+            position: relative;
+            width: 120%;
+            right: 20px;
+        }
+
+        .reset .inputBx input {
+            position: relative;
+            width: 100%;
+            padding: 15px 28px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            font-size: 1.2em;
+            color: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .reset .inputBx input[type="submit"] {
+            width: 100%;
+            background: linear-gradient(45deg, #f7a7b8, #8A2036);
+            border: none;
+            cursor: pointer;
+        }
+
+        .reset .inputBx input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .reset .links {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .reset .links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+
+        .background-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .background-icons i {
+            position: absolute;
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .background-icons i:nth-child(1) {
+            top: 10%;
+            left: 5%;
+        }
+
+        .background-icons i:nth-child(2) {
+            top: 40%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .background-icons i:nth-child(3) {
+            top: 50%;
+            left: 15%;
+            font-size: 150px;
+            animation-delay: 4s;
+        }
+
+        .background-icons i:nth-child(4) {
+            top: 75%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .background-icons i:nth-child(5) {
+            top: 85%;
+            left: 25%;
+            animation-delay: 6s;
+        }
+
+        .background-icons i:nth-child(6) {
+            top: 10%;
+            left: 50%;
+            font-size: 120px;
+            animation-delay: 3s;
+        }
+
+        .background-icons i:nth-child(7) {
+            top: 65%;
+            left: 10%;
+            font-size: 80px;
+            animation-delay: 7s;
+        }
+
+        .background-icons i:nth-child(8) {
+            top: 5%;
+            left: 90%;
+            font-size: 90px;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .swal-popup {
+            border-radius: 15px !important;
+            padding: 25px 20px !important;
+            font-family: 'Quicksand', sans-serif !important;
+        }
+
+        .swal-title {
+            font-size: 24px !important;
+            font-weight: 700 !important;
+            color: #8A2036 !important;
+        }
+
+        .swal-content {
+            font-size: 16px !important;
+            color: #555 !important;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .swal-icon {
+            font-size: 50px !important;
+        }
+
+        .swal2-confirm {
+            padding: 10px 25px !important;
+            font-size: 16px !important;
+            border-radius: 10px !important;
+            background: #8A2036 !important;
+            color: #fff !important;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-icons">
+        <i class="fa fa-car"></i>
+        <i class="fa fa-address-card"></i>
+        <i class="fa fa-usd"></i>
+        <i class="fas fa-key"></i>
+        <i class="fas fa-cogs"></i>
+        <i class="fas fa-chart-line"></i>
+        <i class="fas fa-cloud"></i>
+        <i class="fa fa-bolt"></i>
+    </div>
+
+    <div class="ring">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+
+    <div class="reset">
+        <h2>McCann Worldgroup México</h2>
+        <form id="formCorreo" method="POST">
+    <div class="inputBx">
+        <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+    </div>
+    <br>
+    <div class="inputBx">
+        <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+    </div>
+    <br>
+    <div class="inputBx">
+        <input type="submit" value="Enviar Instrucciones">
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+        window.addEventListener('load', () => {
+        Swal.fire({
+            icon: 'info',
+            title: '🚀 ¡Bienvenido!',
+            html: `
+                <p style="text-align: justify; line-height: 1.6;">
+                    ¡Qué gusto tenerte con nosotros! Este espacio ha sido creado para que 
+                    descubras, experimentes y desarrolles tus habilidades en el área del 
+                    <strong>desarrollo web</strong>.<br><br>
+                    Antes de comenzar, ingresa tu <strong>nombre completo</strong> y tu 
+                    <strong>correo electrónico corporativo o personal</strong> 
+                    (únicamente se aceptan <strong>Gmail, Outlook o Yahoo</strong>).<br><br>
+                    Una vez que envíes tus datos, recibirás un 
+                    <strong>correo con información importante</strong>.
+                </p>
+            `,
+            background: '#fff',
+            color: '#333',
+            confirmButtonText: 'Comenzar',
+            confirmButtonColor: '#8A2036',
+            customClass: { 
+                title: 'swal-title', 
+                content: 'swal-content', 
+                popup: 'swal-popup', 
+                icon: 'swal-icon' 
+            }
+        });
+    });
+document.getElementById('formCorreo').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let email = this.email.value;
+    let regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|yahoo\.com)$/;
+
+    if(!regex.test(email)){
+        Swal.fire({
+            icon: 'error',
+            title: '❌ Correo no permitido',
+            text: 'Solo se aceptan correos de Gmail, Outlook o Yahoo',
+            background: '#fff',
+            color: '#333',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#8A2036',
+            customClass: {
+                title: 'swal-title',
+                content: 'swal-content',
+                popup: 'swal-popup',
+                icon: 'swal-icon'
+            }
+        });
+        return;
+    }
+
+    let formData = new FormData(this);
+    fetch('enviar_info.php', { method: 'POST', body: formData })
+    .then(res => res.json())
+    .then(data => {
+        if(data.success){
+            Swal.fire({
+                icon: 'success',
+                title: '✅ Correo enviado',
+                text: data.message,
+                background: '#fff',
+                color: '#333',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#8A2036',
+                customClass: { title:'swal-title', content:'swal-content', popup:'swal-popup', icon:'swal-icon' }
+            });
+            this.reset();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: '❌ Error',
+                text: data.message,
+                background: '#fff',
+                color: '#333',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#8A2036',
+                customClass: { title:'swal-title', content:'swal-content', popup:'swal-popup', icon:'swal-icon' }
+            });
+        }
+    })
+    .catch(err => {
+        Swal.fire({
+            icon: 'error',
+            title: '❌ Error',
+            text: 'Ocurrió un error inesperado',
+            background: '#fff',
+            color: '#333',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#8A2036',
+            customClass: { title:'swal-title', content:'swal-content', popup:'swal-popup', icon:'swal-icon' }
+        });
+        console.error(err);
+    });
+});
+</script>
