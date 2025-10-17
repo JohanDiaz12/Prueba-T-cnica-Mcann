@@ -1,2 +1,2 @@
-# Prueba-T-cnica-Mcann
+# Prueba-Tecnica-Mcann
 Prueba tecnica pra Mccann México
